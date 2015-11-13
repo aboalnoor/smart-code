@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Smart Code</title>
+	<link rel="stylesheet" href="css/style.css">
+
+	<link href='css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/earlyaccess/droidarabickufi.css">
+<link rel="import" href="partials/about.html">
+</head>
+<body>
+
+
+ <!-- avoid including script -->
+
+  <div id="container"></div>
+
+  <!-- avoid including script -->
+  
+
+  <script>
+    // Other scripts n' stuff.
+
+    // Bring in the import content.
+    var link = document.querySelector('link[rel="import"]');
+    var post = link.import.querySelector('#blog-post');
+
+    var container = document.querySelector('#container');
+    container.appendChild(post.cloneNode(true));
+  </script>
+
+
+
+
+
+
+<p>
+Grumpy wizards make toxic brew for the evil Queen and Jack.
+جملة تجريبية لمشاهدة تطبيق الخط بالكتبة بالعرب.
+</p>
+
+	<script src="js/application.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>
