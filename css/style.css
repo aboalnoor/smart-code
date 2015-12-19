@@ -87,7 +87,9 @@ z-index: 6;}
 #header .navbar .container{
 	width: 100%;
 }
-
+.logo {
+	height: 64px;
+}
 .nav{
 	float: right!important;
 margin-right: -15px;
@@ -269,7 +271,7 @@ padding: 8px 12px;
 border: 1px solid #e2e2e2;
 }
 
-.contact-form input[type="submit"] {
+input[type="button"], input[type="submit"] {
 padding-left: 30px;
 padding-right: 30px;
 width: auto;
@@ -300,4 +302,60 @@ border-top-color: #e2e2e2 !important;
 border-top-style: solid !important;
 border-bottom-color: #e2e2e2 !important;
 border-bottom-style: solid !important;
+}
+
+.dialog {
+	display: none;
+	position: fixed;
+top: 0px;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 9999;
+background-color: rgba(0, 0, 0, 0.8);
+}
+.dialog.show{
+	display: block;
+}
+
+.invoice {
+	max-width: 500px;
+border: 1px solid #e2e2e2;
+position: relative;
+margin: 20px auto;
+padding: 30px;
+top: 131px;
+/* left: 50px; */
+background: #ffffff;
+}
+
+
+table {
+    width:100%;
+}
+table, th, td {
+    border: 1px solid rgb(228, 228, 228);
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+   background-color:#fff;
+}
+table#t01 th	{
+    background-color: black;
+    color: white;
+}
+
+.product img{
+	height: 128px;
+}
+
+.close{
+	text-align: end;
 }

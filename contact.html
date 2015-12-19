@@ -19,7 +19,7 @@
     <div class="container">
      <div class="navbar-header">
       <a class="navbar-brand" href="index.html">
-        <img src="http://shamsoft.net/theDocs/assets/img/logo.png" alt="logo"></a>
+        <img src="logo.png" class="logo" alt="logo"></a>
       </div>
 
       <div>
@@ -85,30 +85,34 @@
       </div>
 
       <div class="  col-6 ">
-          <div role="form" class="wpcf7" id="wpcf7-f4-p67-o1" lang="en-US" dir="ltr">
+          <div role="form"lang="en-US" dir="ltr">
            
-            <form action="/contact-us/#wpcf7-f4-p67-o1" method="post" class="contact-form" novalidate="novalidate">
+            <form name="contactForm" id="contactForm" action="" class="contact-form" novalidate="novalidate">
 
               <label>Your Name (required)</label>
-              <span class="wpcf7-form-control-wrap your-name">
-                <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+              <span >
+                <input type="text" name="name" id="name" value="" size="40"  required>
               </span>
               <label>Your Email (required)</label>
-                <input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false">
+                <input type="email" name="email" id="email" value="" size="40" >
               <label>Subject <span class="hint">Let us know your topic of interest</span><label>
-                <span class="wpcf7-form-control-wrap your-subject">
-                  <input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false">
+                <span >
+                  <input type="text" name="subject" id="subject" value="" size="40">
                 </span> 
+
+                <label>Date<label>
+                <span >
+                  <input type="date" name="date" id="date">
+                </span> 
+
                 <label>Your Message</label>
-                <span class="wpcf7-form-control-wrap your-message">
-                  <textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea>
+                <span >
+                  <textarea name="message" cols="40" rows="10" ></textarea>
                 </span> 
                 <div>
-                  <input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit">
-                  <img class="ajax-loader" src="http://broker.commercegurus.com/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..." style="visibility: hidden;">  
+                  <input type="submit" value="Submit" >
                 </div>
-                <div class="wpcf7-response-output wpcf7-display-none">
-                </div>
+               
               </form>
             </div>
           </div>
@@ -122,7 +126,7 @@
   <footer>
     <div class="container">
       <div class="col-4">
-        <img src="http://broker.commercegurus.com/wp-content/uploads/2015/10/broker-logo-w.png" class="logo" alt="Broker Logo" style="display: block; max-width: 180px; margin-bottom: 18px; margin-top: -4px;">
+        <img src="logo.png" class="logo" alt="Broker Logo" style="display: block; max-width: 180px; margin-bottom: 18px; margin-top: -4px;">
 
         <p style="margin-right: 10px;">We provide expert financial advice to both individuals and businesses. With over 20 years of experience we’ll ensure that you’re always getting the best guidance from the top people in the entire industry.</p>
       </div>
