@@ -7,24 +7,6 @@ function closeDialog() {
 
 function getCost() {
 
-
-// 	var x=document.getElementsByClassName("product");
-
-// 	for (var i = x.length - 1; i >= 0; i--) {
-// 		console.log(x[i]);
-// 	};
-// 	console.log(x);
-// 	var y= $('.product');
-
-// for (var i = 0; i < x.length; i++) {
-// 	var row = y[i];
-	
-// 	var amount= row.children[2].children[0].value;
-// 	var cost= y[i];
-// 		console.log(name);
-// 	};
-// 	console.log(y);
-
 var invoiceList= $('.invoice .list');
 var products= $('.product');
 var totalCost=0;
@@ -51,10 +33,15 @@ function validation() {
 	
 var name= document.getElementById("name");
 var email= document.getElementById("email");
-		existValidation(name);
-		existValidation(email);
-    
-	
+
+		 if (existValidation(name)) 
+				if (nameValidation(name))
+					if (existValidation(email))
+						if(emailValidation(email))
+								if(dateValidation(date))
+									if(existValidation(message)) {
+										alert("Sending the message ... \n validation successed");
+									}
 }
 
 function existValidation(elem) {
@@ -69,4 +56,56 @@ function existValidation(elem) {
 }
 
 
-document.getElementById("contactForm").onsubmit=validation;
+function nameValidation(name) {
+
+var pos = name.value.search(/^[A-Za-z]{1,10}$/);
+if (pos != 0) {
+alert("The name you entered (" + name.value +
+") is not in the correct form. \n" +
+"Please go back and fix your name");
+name.focus();
+name.select();
+return false;
+} else
+return true;
+}
+
+function emailValidation(email) {
+
+var pos = email.value.search(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/); 
+if (pos != 0) {
+alert("The name you entered (" + email.value +
+") is not in the correct form. \n" +
+"Please go back and fix your email");
+email.focus();
+email.select();
+return false;
+} else
+return true;
+}
+
+
+
+
+ //checks for past date
+  function dateValidation(date){ 
+      var today =new Date();
+      var inputDate = new Date(date.value);
+      if (date.value == "" ){
+      	alert("Enter the date");
+      	date.focus();
+					date.select();
+          return false;
+      } else if (inputDate < today) {
+      	alert("date cant be in the past");
+      		date.focus();
+					date.select();
+          return false;
+      } else {
+          return true;
+      }
+  }
+
+
+
+//document.getElementById("contactForm").onsubmit=validation;
